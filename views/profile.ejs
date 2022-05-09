@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T H A P A K O R N</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/image/profile.ico"> 
+</head>
+<body>
+    <header>
+        <div class="logo-1">
+            <img src="/image/portfolio.png">
+            <div class="logo-2">
+                <h1>PORTFOLIO</h1>
+                <h2>THAPAKORN MEETHAN</h2>
+            </div>
+        </div>
+        <ul class="nav-link">
+            <li><a href="#sec-1">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skill">Skilled</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    <section id="sec-1">
+        <div class="sec-1">
+            <h1>Welcome to my website</h1>
+            <p>ยินดีต้อนรับเข้าสู้เวปไซต์ ผลงานของผม</p>
+            <a href="#about" class="btn-1">About</a>
+        </div>
+        <img src="/image/img-1.jpeg" class="img-1">
+    </section>
+    <footer>
+        <div id="about" class="about-1">
+            <div class="about-logo">
+                <img src="/image/user.png" class="logo-about">
+                <h1>About me</h1><br>
+            </div>
+            <div class="about-contain">
+                <img src="/image/about1.jpg" class="img-about">         
+                <div class="about-p">
+                    <p>
+                        <h2>ประวัติโดยย่อ</h2><br>
+                        ชื่อจริงชื่อ "นายฐาปกรณ์ มีแทน" ชื่อเล่น "กัส" มีความสนใจด้านคอมพิวเตอร์ ตั้งแต่ประถม<br> 
+                        แต่เริ่มสนใจศึกษาจริงๆ คือ ตอนอยู่มัธยมศึกษาตอนปลาย และชอบศึกษาหาความรู้เกี่ยวกับเทคโนโลยีใหม่ๆ ตลอดเวลา<br>
+                    </p>
+                    <p>xx
+                        <h2>ประวัติการศึกษา</h2><br>
+                        จบระดับมัธยมศึกษาจาก "โรงเรียนพูลเจริญวิทยาคม" สาขา "ศิลป์-คำนวณ"<br>
+                        ปัจจุบันกำลังศึกษาใรระดับปริญญาตรีอยู๋ที่ "มหาวิทยาลัยกรุงเทพ" คณะ-สาขา "วิศวกรรมคอมพิวเตอร์ และหุ่นยนต์"<br>
+                        และมีความคิดจะศึกษาต่อในระดับปริญญาโท สาขา "Computer-science"<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="skill" class="skill-1">
+            <div>
+                <div class="logo-skill">
+                    <img src="/image/settings.png">
+                    <h1>Skilled</h1><br>
+                </div>
+                <p class="para-skill">
+                    <h2>ความสามารถ</h2><br>
+                    ปัจจุบันกำลังศึกษาการพัฒนา Web application (การใช้งาน css,javascript) <br>
+                    การใช้งาน javascript ในรูปแบบ library ต่างๆ (React.js , vue.js , node.js)<br>
+                </p>
+            </div>
+            <div>
+                <img src="/image/js.png" class="sk-m-1">
+                <img src="/image/react.png" class="sk-m-2">
+                <img src="/image/css.png" class="sk-m-3">
+            </div>
+        </div>
+        <div class="space">
+            <br>
+        </div>
+        <div id="contact" class="contact-1">
+            <div>
+                <ul class="nav-foot">
+                    <li><a href="https://www.instagram.com/glaz__130/">Intragram</a></li>
+                    <li><a href="https://web.facebook.com/gustheworld/">Facebook</a></li>
+                    <li><a href="#" id="email">Email</a></li>
+                </ul>
+                <div class="logo-foot">
+                    <h1>Contact</h1>
+                    <img src="/image/phone.png">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        //รับ Event เมื่อมีการเลื่อน scroll ในเวป ในทำ Function เปลี่ยน class header เป็น sticky เพื่อให้ nav-bar คิดไปกับหน้าเว็ปเวลาเลื่อน
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+    <script>
+        //ประกาศตัวแปร mail รับค่า เมื่อมีการคลิ้กที่ปุ่ม email จะทำการเด้งหน้าต่าง alert แสดง email ออกมา
+        const mail=document.getElementById("email");
+        mail.onclick=function(){
+            alert("EMAIL: gustheworld6@gmail.com")
+        }
+    </script>
+</body>
+</html>

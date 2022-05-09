@@ -8,6 +8,7 @@ const app = express()
 const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json())
+app.use(express.static("public"));
 
 //MySQL Connect phpMyadmin
 const pool = mysql.createPool({
@@ -54,6 +55,10 @@ app.get('/lot_reward_3',(req,res) => {
 
 app.get('/lot_reward_choice',(req,res) => {
     res.render('lot_reward_choice')
+})
+
+app.get('/profile',(req,res) => {
+    res.render('profile')
 })
 
 //POST เพิ่มข้อมูลรางวัลวันที่ 16 มีนาคม
