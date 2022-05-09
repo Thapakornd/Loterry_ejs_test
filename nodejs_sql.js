@@ -176,6 +176,17 @@ app.get('/show_reward_3',(req, res) => {
     })
 })
 
+app.get('lot_show_1',(req,res) => {
+    pool.connection((err, connection) => {
+        if(err) throw err
+        console.log("connected id : ?", connection.threadId)
+
+        connection.query('SELECT * FORM lottery_1_march WHERE `user_id` = ?',[req.params.user_id], (err, rows) => {
+            
+        })
+    })
+})
+
 //----Server_port-----
 app.listen(port,() => {
     console.log("listen on port : ?",port)
