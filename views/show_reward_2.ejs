@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show reward</title>
+</head>
+<body>
+    <h1>Show reward</h1>
+    <p>รางวัลต่างๆ</p>
+    <a href="/lot_reward_2">เพิ่มข้อมูลรางวัล</a>
+    <a href="/">กลับหน้าหลัก</a>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>ชื่อรางวัล</th>
+            <th>คำอธิบายรางวัล</th>
+            <th>date</th>
+        </tr>
+        <% lots.forEach(function(item) { %>
+        <tr>
+            <td><%= item.id %></td>
+            <td><%= item.lot_name %></td>
+            <td><%= item.lot_des %></td>
+            <td><%= item.date %></td>            
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

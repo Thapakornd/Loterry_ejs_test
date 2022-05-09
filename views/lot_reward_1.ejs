@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery reward</title>
+</head>
+<body>
+    <h1>Lottery reward</h1>
+    <a href="/lot_reward_choice">ดูตารางรางวัลต่างๆ</a>
+    <a href="/">กลับหนัาหลัก</a>
+    <% if(typeof mesg != "undefined") { %>   
+        <h1><%= mesg %></h1>    
+    <% } %>
+    <form action="/lot_reward_1" method="post">
+        <div>
+            <label>ชื่อรางวัล</label>
+            <input type="text" name="lot_name" id="lot_name">
+        </div>
+        <div>
+            <label>คำอธิบายรางวัล</label>
+            <input type="text" name="lot_des" id="lot_des">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
